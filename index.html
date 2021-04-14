@@ -1,52 +1,124 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>毎フリ for Slack</title>
-  <meta name="description" content="毎フリ for Slack">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>毎フリSlackアプリ</title>
+  <meta property="og:url" content="https://maifuri.github.io/slack-app-install/">
+  <meta property="og:title" content="毎フリSlackアプリ">
+  <meta name="description" content="当日インターネットに公開されているフリーランス案件のまとめ">
   <meta name="author" content="mainichifreelance">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="summary" name="twitter:card">
+  <meta content="@mai_furi" name="twitter:site">
+  <meta content="@mai_furi" name="twitter:creator">
+  <meta name="og:image" content="https://maifuri.github.io/slack-app-install/images/maifurislacklogo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="当日インターネットに公開されているフリーランス案件のまとめ">
+
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-<script charset="utf-8" src="https://platform.twitter.com/js/button.cf7aaea83eb75b84ae4508f0ceb5dc4c.js"></script></head>
+<script charset="utf-8" src="https://platform.twitter.com/js/button.cf7aaea83eb75b84ae4508f0ceb5dc4c.js"></script>
+<style type="text/css">
+<!--
+.comment {
+  padding: 1rem;
+  line-height:1.1em;
+  display: flex;
+  width: 20rem;
+  border: 1px solid #777;
+  border-radius: 6px;
+}
+.comment-left {
+  margin-right: 1rem
+}
+.comment-right {
+}
+.comment-avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.comment-buttons {
+  font-size: smaller;
+  text-align: right;
+}
+.comment-button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+-->
+</style>
+</head>
 
 <body>
-
   <section class="container">
     <div class="social">
     <header>
-      <h1 style="text-align:left;" >毎フリ for Slack</h1>
+      <h1 style="text-align:left;" >毎フリSlackアプリ</h1>
     <img src="images/maifuri.svg" style="width:960px;" >
     </header>
     <a href="https://twitter.com/mai_furi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" >Follow @mai_furi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 
-
-    <p>
-      フリーランス案件を毎日おとどけします。
-    </p>
-
-    <h2>あなたのslackチームにインストール</h2>
-
-    <p>毎フリSlackの利用はとても簡単。
-    ボタンをクリックして、Slackアカウントにログインしたら、チームを選択します。</p>
-
-    <!-- Slack OAuth button -->
-    <a href="https://slack.com/oauth/v2/authorize?scope=channels%3Amanage%2Ccommands%2Cfiles%3Aread%2Cgroups%3Awrite%2Cim%3Awrite%2Cmpim%3Awrite%2Cchat%3Awrite&state=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YWxsT3B0aW9ucyI6eyJzY29wZXMiOlsiY2hhbm5lbHM6bWFuYWdlIiwiY29tbWFuZHMiLCJmaWxlczpyZWFkIiwiZ3JvdXBzOndyaXRlIiwiaW06d3JpdGUiLCJtcGltOndyaXRlIiwiY2hhdDp3cml0ZSJdfSwibm93IjoiMjAyMS0wMy0xNFQxMzozMDoyNy40NzdaIiwiaWF0IjoxNjE1NzI4NjI3fQ.-9jqjw8O9X6j_cb2X4PKd1RpULhycnUN9thrK041StI&client_id=1544793832864.1519506174247"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
-
-    <p>ボットは１度インストールしたら、あなたのチームのチャットルームでスラッシュコマンドが使えるようになります。
-      次のように打鍵してください<code>/findcase</code></p>
-
+    <h2>
+    <p>フリーランス案件を毎日おとどけします。</p>
+    </h2>
+    <p>毎フリはインターネットで公開されている案件情報を毎にち収集して配信しています。</p>
+    <p>掲載元リンクでブラウザから詳細を確認できます。</p>
+    <p>Slackアプリ版ではアプリユーザーが案件を登録できて、ユーザー登録案件には応募することもできます。</p>
+    <p>４週間ごとの単価と案件数の推移を見られるので、市況感から適切な案件を探しましょう。</p>
 
     <div class="logo">
       <img src="images/slack_logo.png" style="width:120px;" >
       <img src="images/plus.png">
-      <img src="images/maifuri_logo.png" style="width:100px;" >
+      <img src="images/maifurislacklogo.png" style="width:100px;" >
     </div>
 
-    <h2>毎フリ for Slack について</h2>
-    <p>毎フリはインターネットで公開されている案件情報を毎にち収集して配信しています。掲載元リンクでブラウザから詳細を確認できます。</p>
-    <p>Slackアプリ版ではアプリユーザーが案件を登録できて、ユーザー登録案件には応募することもできます。</p>
-    <p>４週間ごとの単価と案件数の推移を見られるので、市況感から適切な案件を探しましょう。</p>
+    <br><br>
+
+    <h2>Slackワークスペースに毎フリSlackアプリをインストール</h2>
+
+    <p>毎フリSlackアプリはワークスペース にインストールして利用します。</p>
+    <p>ボタンをクリックして、Slackアカウントにログインしたら、ワークスペース を選択します。</p>
+    <p>あなたが新規に作成したワークスペース にも、<br>メンバーがいる既存のワークスペース にもインストールできます。</p>
+
+    <div class="comment">
+      <div class="comment-right" style="" >
+    <!-- Slack OAuth button -->
+    <a style="margin:0em;" href="https://slack.com/oauth/v2/authorize?scope=channels%3Amanage%2Ccommands%2Cfiles%3Aread%2Cgroups%3Awrite%2Cim%3Awrite%2Cmpim%3Awrite%2Cchat%3Awrite&state=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YWxsT3B0aW9ucyI6eyJzY29wZXMiOlsiY2hhbm5lbHM6bWFuYWdlIiwiY29tbWFuZHMiLCJmaWxlczpyZWFkIiwiZ3JvdXBzOndyaXRlIiwiaW06d3JpdGUiLCJtcGltOndyaXRlIiwiY2hhdDp3cml0ZSJdfSwibm93IjoiMjAyMS0wMy0xNFQxMzozMDoyNy40NzdaIiwiaWF0IjoxNjE1NzI4NjI3fQ.-9jqjw8O9X6j_cb2X4PKd1RpULhycnUN9thrK041StI&client_id=1544793832864.1519506174247"><img alt="Add to Slack" height="40" width="139" style="margin:0.4em auto 0.2em;" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+        <p class="comment-text">毎フリSlackアプリをインストールします。</p>
+        <div class="comment-buttons">
+          <a class="comment-button">毎フリSlackアプリ</a>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h2>毎フリアプリがインストールされています</h2>
+    <p>フリーランスエンジニアのワークスペース</p>
+    <div class="comment">
+      <div class="comment-left">
+        <img style="margin: 0em auto 0em;" src="./images/CodeForFree_logo.svg" alt="maifuri.slack.com" class="comment-avatar">
+      </div>
+      <div class="comment-right">
+      <!--
+        <a class="comment-name" href="https://join.slack.com/t/maifuri/shared_invite/zt-oxs1s13p-abL_JfKrLwNK4d78FDa58g"><strong>エンジニア起業</strong></a>
+        -->
+        <a class="comment-name" href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><strong>Code for Free</string></a>
+        <p class="comment-text">フリーランスエンジニアが情報交換するためのワークスペース</p>
+        <div class="comment-buttons">
+          <a class="comment-button">code-for-free.slack.com</a>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h2>毎フリSlackアプリ</h2>
+    <p>１度インストールしたら、あなたのチームのチャットルームでスラッシュコマンドが使えるようになります。
+      </p>
 
     </p><div class="status">
     <p style="font-size:16pt;font-weight:900;background-color:#ffff00;" >▼&nbsp;当日に公開された最新の案件が見られます。</p>
