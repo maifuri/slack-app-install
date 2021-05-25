@@ -1,22 +1,25 @@
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
-  <title>毎フリSlackアプリ</title>
-  <meta property="og:url" content="https://maifuri.github.io/slack-app-install/">
-  <meta property="og:title" content="毎フリSlackアプリ">
-  <meta name="description" content="当日インターネットに公開されているフリーランス案件のまとめ">
-  <meta name="author" content="mainichifreelance">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="summary" name="twitter:card">
-  <meta content="@mai_furi" name="twitter:site">
-  <meta content="@mai_furi" name="twitter:creator">
-  <meta name="og:image" content="https://maifuri.github.io/slack-app-install/images/maifurislacklogo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="当日インターネットに公開されているフリーランス案件のまとめ">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>毎フリSlackアプリ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:url" content="https://maifuri.github.io/slack-app-install/">
+<meta property="og:title" content="フリー案件まとめ | Slackコミュニティ">
+<meta property="og:type" content="website">
+<meta property="og:description" content="当日インターネットに公開されているフリーランス案件のまとめ">
+<meta name="keywords" content="フリーランス案件情報,毎日更新">
+<meta name="description" content="当日インターネットに公開されているフリーランス案件のまとめ">
+<meta name="author" content="mainichifreelance">
+<meta name="og:image" content="https://maifuri.github.io/slack-app-install/images/maifurislacklogo.png">
+<meta name="twitter:image" content=https://maifuri.github.io/slack-app-install/images/maifuri_twitterLargeCard.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@mai_furi">
+<meta name="twitter:creator" content="@mai_furi">
 
   <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJtE" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -24,7 +27,7 @@
 <style type="text/css">
 <!--
 .comment {
-  padding: 1rem;
+  padding: 0.2rem;
   line-height:1.1em;
   display: flex;
   width: 20rem;
@@ -32,7 +35,7 @@
   border-radius: 6px;
 }
 .comment-left {
-  margin-right: 1rem
+  margin: 0.6rem;
 }
 .comment-right {
 }
@@ -45,7 +48,14 @@
   text-align: right;
 }
 .comment-button:not(:last-child) {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+}
+@media(min-width: 800px) {
+  .header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
 }
 -->
 </style>
@@ -53,10 +63,10 @@
 
 <body>
   <section class="container">
-    <div class="social">
+    <div class="social" >
     <header>
-      <h1 style="text-align:left;" >毎フリSlackアプリ</h1>
-    <img src="images/maifuri.svg" style="width:960px;" >
+      <h1 style="text-align:left;font-size:24pt;" >毎フリSlackアプリ</h1>
+      <img src="images/maifuri.svg" style="width:100%;object-fit:cover;" >
     </header>
     <a href="https://twitter.com/mai_furi?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" >Follow @mai_furi</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
@@ -106,8 +116,8 @@
       <!--
         <a class="comment-name" href="https://join.slack.com/t/maifuri/shared_invite/zt-oxs1s13p-abL_JfKrLwNK4d78FDa58g"><strong>エンジニア起業</strong></a>
         -->
-        <a class="comment-name" href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><strong>Code for Free</string></a>
-        <p class="comment-text">フリーランスエンジニアが情報交換するためのワークスペース</p>
+        <a class="comment-name" href="https://join.slack.com/t/code-for-free/shared_invite/zt-pi14pz68-qi_iLpwOht2AqVVATTpRjg"><strong style="font-size:14pt;">Code for Free</string></a>
+        <p class="comment-text" style="font-size:12pt;">フリーランスエンジニアが情報交換するためのワークスペース</p>
         <div class="comment-buttons">
           <a class="comment-button">code-for-free.slack.com</a>
         </div>
@@ -122,19 +132,23 @@
 
     </p><div class="status">
     <p style="font-size:16pt;font-weight:900;background-color:#ffff00;" >▼&nbsp;当日に公開された最新の案件が見られます。</p>
-      <img src="images/caselist.png" style="width:636px;height:613px;" >
+<!--      <img src="images/caselist.png" style="width:636px;height:613px;" >-->
+      <img src="images/caselist.png" style="width:80%;height:auto;">
       </div>
       <div class="status">
       <p style="font-size:16pt;font-weight:900;background-color:#ffff00;" >▼&nbsp;直近12週間の平均の単価の推移が見られます。</p>
-      <img src="images/12weeks.png" style="width:623px;height:644px;" >
+<!--      <img src="images/12weeks.png" style="width:623px;height:644px;" >-->
+      <img src="images/12weeks.png" style="width:80%;height:auto;" >
       </div>
       <div class="status">
       <p style="font-size:16pt;font-weight:900;background-color:#ffff00;" >▼&nbsp;インターネットに公開されていない案件に応募できます。</p>
-      <img src="images/case_closed.png" style="width:596px;height:457px;" >
+<!--      <img src="images/case_closed.png" style="width:596px;height:457px;" >-->
+      <img src="images/case_closed.png" style="width:80%;height:auto;">
       </div>
       <div class="status">
       <p style="font-size:16pt;font-weight:900;background-color:#ffff00;" >▼&nbsp;あなたがご存知の案件を登録できます。<br/>毎フリアプリを使っているSlackユーザーで共有してください。</p>
-      <img src="images/case_open.png" style="width:405px;height:331px;" >
+<!--      <img src="images/case_open.png" style="width:405px;height:331px;" >-->
+      <img src="images/case_open.png" style="width:70%;height:auto;" >
     </div>
 
     <footer style="font-size:16pt; line-height:84pt;" >
